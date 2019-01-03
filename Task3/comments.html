@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>comments.html</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="index.html" method="get" name="some_form">
+		<fieldset>
+			<legend>Отзыв покупателя</legend>
+			<p>
+				<label>Автор:
+					<input type="text" name="name" required>				
+				</label>
+				<label>Emeil:
+					<input type="email" name="email">
+				</label>
+				<br>
+			</p>	
+				<hr>
+			
+			<p>
+				<label>Товар:
+					<input type="text" name="product" required>
+				</label>
+			</p>
+			<hr>
+			<p>
+				Оценка:
+				<input type="radio" name="rating" value="1" required>1
+				<input type="radio" name="rating" value="2" required>2
+				<input type="radio" name="rating" value="3" required>3
+				<input type="radio" name="rating" value="4" required>4
+				<input type="radio" name="rating" value="5" required>5
+			</p>
+			<hr>
+			<p>
+				Комментарий:
+				<textarea placeholder="Напишите здесь отзыв о товаре" required></textarea>
+			</p>
+			<input type="submit" name="return_comments" value="Оставить отзыв">
+		</fieldset>
+	</form>
+
+</body>
+</html>

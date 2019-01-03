@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>формы</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<!--<form action="/login.php" method="get" enctype="multipart/form-data"> adres-->
+	<form action="index.html" method="get" name="some_form">
+		<input type="text" name="some_text" value="что-то">
+		<input type="password" name="">
+		<input type="text" name="onemore_text" maxlength="12" minlength="3" required> <!-- обязательно для заполнения -->
+		<br>
+		<input type="radio" name="weekday" value="3" checked>Среда
+		<input type="radio" name="weekday" value="5">Пятница
+		<input type="radio" name="weekday" value="7">Воскресенье
+		<br>
+		<input type="checkbox" name="day" value="3" checked>Среда
+		<input type="checkbox" name="day" value="5">Пятница
+		<input type="checkbox" name="day" value="7">Воскресенье
+		<br>
+		<input type="button" name="" value="я кнопка">
+		<input type="submit" name="" value="я кнопка" disabled>
+		<input type="image" name="" src="" alt="button" height="30"> <!-- submit defoult-->
+		<input type="reset" name="" value="сбросить">
+		<input type="text" name="some_text" placeholder="xnj1nj">
+		<input type="hidden" name="secret" value="restricted!">
+		<br>
+		<input type="file" name="upload" multiple> <!-- выбрать несколько файлов-->
+		<br>
+		<input type="date" name="birsday" value="2014-12-12" readonly> <!-- пользователь не может изменить-->
+		<input type="datetime-local" name="meeting">
+		<input type="datetime" name="meeting2">
+		<input type="time" name="apntmt">
+		<input type="month" name="holidays">
+		<input type="week" name="">
+		<br> 
+		<button>
+			
+		</button>
+		<fieldset>
+			<legend>Личные данные</legend>
+		<label for="email">Email</label>
+		<input id="email" type="email" name="email" autocomplete="off"> <!-- автозаполнение-->
+		<label>Телефон
+			<input type="tel" name="phone" pattern="\+[2359]{2}[9-0]{7}">
+		</label>
+		<label>Страница соцсети
+			<input type="url" name="url">
+		</label>
+		</fieldset>
+		
+		<br>
+		<input type="color" name="color">
+		<input type="number" name="somenum" step="0.1" min="3" max="5.4">
+		<input type="range" name="age" min="16" max="102" step="0.3">
+		<input type="search" name="request">
+		<button type="button"> awdawd </button>
+		<select name="month">
+			<option disabled>Зима</option>
+			<option value="january">january </option>
+			<option value="february">february</option>
+			<option disabled>Весна</option>
+			<option value="march" selected>march</option>
+		</select>
+		<textarea name="comment">bla-bla
+		</textarea>
+	</form>
+<a href="mailto:someone@some.com">dawdawd</a>
+<a href="tg:@someone.com">dawdaw</a>
+<a href="tel:+375333333333">dadwad</a>
+
+</body>
+</html>
