@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+}
+
+p {
+	height: 40vh;
+	font-weight: 700;
+/*	width: 50%;
+/*  font-size: 2ex;
+	font-size: 1.8em; <== использовать для размеров шрифта 
+	font-size: 16px;  /* каринки и в процентах % 
+	width: 70vh;  высота просмотра */
+	width: 70vmin;
+	/*color: #658574;
+	color: rgba(255,255,255,1);
+	background-color: #f99f9f;
+	background: url();*/
+	font-family: serif; /* шрифты с пробелами в ковычки  " " */
+	font-weight: normal;
+	font-style: italic;
+	/*text-decoration-line: underline;
+	text-decoration-style: double;
+	text-decoration-color: red;    */
+	text-decoration: underline dotted red;
+	text-align: start;
+	vertical-align: bottom;    /* редко используетя */
+	line-height: 150%;
+	font-variant: small-caps;   /*. Большие буквы размером с маленькие */
+	letter-spacing: .1em;     /*.  растояние между буквами*/
+	text-indent: 3em;
+	text-transform: uppercase;    /*. Размеры букв.  */
+	word-spacing: 1em;  
+	font: italic small-caps bold 1em/15px Verdana, sans-serif;     
+}
+
+ul{
+	font-size: 150%;
+	list-style-type: square;
+	list-style-image: url();
+	list-style-position: inside;
+
+}
+
+ol {
+	font-size: 150%;
+	list-style-type: upper-roman;
+	border: 1px solid #fff000;
+	border-width: 2px;
+	border-style: dashed;
+	border-color: #fff; /*. прозрачность */
+	border-radius: 20px;
+}
+
+
+div {
+	background-color: olive;
+}
+
+table {
+	border-spacing: 3em;
+	font-size: 150%;
+	border-collapse: collapse;
+}
+
+table, td, th {
+	border: 1px solid #000;
+	font-size: 150%;
+}
+
+td {
+	color: #f0d;
+}
+
+#special {
+	color: #000;
+}
+
+.red {
+	color: red;
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
