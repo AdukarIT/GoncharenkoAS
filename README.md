@@ -35,3 +35,13 @@
 ## 5. Основы CSS
 1. [JSBin 1](https://jsbin.com/wexiya/edit?css,output)
 1. [GIT](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task5)
+
+## 6. CSS. Позиционирование
+1. [Practice](tast6)
+
+## 7. Float. Псевдоклассы и составные селекторы
+1. [Practice](task7)
+1. [Homework](task7)
+
+## 8. Свойства видимости. Именование классов. БЭМ
+1. [Practice](task8)

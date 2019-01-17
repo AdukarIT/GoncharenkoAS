@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Форма</title>
+	<style>
+		
+	.form__item {
+		margin: 20px;
+		padding: 20px;
+	}
+
+	.form__item--style {
+		font-size: 1.5em;
+	}
+
+	.form__input--view {
+		width: 40%;
+		border-width: 0;
+		border-bottom:3px solid green;
+		padding: 10px 20px;
+		margin: 10px;
+		box-sizing: border-box;
+	}
+
+	label {
+		margin: 10px; 
+		display: block;
+	}
+
+	.form__input--submit {
+
+	}
+
+	.form__batton--color:hover {
+		background-color: rgba(58, 239, 167, .5);
+	} 
+
+	.form__first-name--color:hover {
+		background-color: rgba(0,0,0,.1);
+	}
+
+	.form__input--view:after::hover {
+		content: attr(data-title);
+	}
+
+	.left-side {
+		float: left;
+	}
+
+	.right-side {
+		float: right;
+		position: absolute;
+		left: 200px;
+		margin: 10px;
+	}
+
+	.col {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.weathe > label {
+		display: inline-block;
+	}
+
+	</style>
+</head>
+<body>
+
+<form class="form__item">
+	<div class="left-side">
+	<label>Имя</label>
+	<label>E-mail</label>
+	<label>Страна</label>
+	<label>Любимая пара года:</label>
+</div>
+<div class="right-side">
+	<input class="col" type="text" name="firstname" placeholder="Ваше имя..." required>
+	<input class="col" data-title="Aaaaaaaaa" type="email" name="email" placeholder="some@email.com" required>
+	<select>
+		<option>Гондурас</option>
+		<option>Парагвай</option>
+		<option>Мордор</option>
+		<option>Пандора</option>
+	</select>
+	<div class="weathe">
+	<label><input type="radio" value="winter" name="weathe" title="Fuck">Зима</label>
+	<label><input type="radio" value="summer" name="weathe">Лето</label>
+	<label><input type="radio" value="otem" name="weathe">Осень</label>
+	<label><input type="radio" value="spring" name="weathe">Весна</label>
+	</div>
+	<input class="form__batton--color" type="submit" name="send" value="Зарегистрироваться">	
+	</div>
+
+</form>
+
+
+</body>
+</html>

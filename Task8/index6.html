@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Форма</title>
+	<style>
+		
+	.form__item {
+		margin: 20px;
+		padding: 20px;
+	}
+
+	.form__item--style {
+		font-size: 1.5em;
+	}
+
+	.form__input--view {
+		width: 70%;
+		border:0 solid #000;
+		border-bottom:3px solid green;
+		padding: 10px 20px;
+		margin: 10px;
+		box-sizing: border-box;
+	}
+
+	label {
+		margin: 10px; 
+	}
+
+	.form__input--submit {
+
+	}
+
+	.form__batton--color:hover {
+		background-color: rgba(58, 239, 167, .5);
+	} 
+
+	.form__first-name--color:hover {
+		background-color: rgba(0,0,0,.1);
+	}
+
+	.form__input--view:after::hover {
+		content: attr(data-title);
+	}
+
+	</style>
+</head>
+<body>
+
+<form class="form__item ">
+	<div  class="form__item--style">
+	<label>Имя</label>
+	<br>
+	<input class="form__input--view form__first-name--color" type="text" name="firstname" placeholder="Ваше имя..." required>
+	<br>
+	<label>E-mail</label>
+	<br>
+	<input class="form__input--view" data-title="Aaaaaaaaa" type="email" name="email" placeholder="some@email.com" required>
+	<br>
+	<label>Страна</label>
+	<br>
+	<select class="form__input--view">
+		<option>Гондурас</option>
+		<option>Парагвай</option>
+		<option>Мордор</option>
+		<option>Пандора</option>
+	</select>
+	<br>
+	<label>Любимая пара года:</label>
+	<label><input type="radio" value="winter" name="weathe" title="Fuck">Зима</label>
+	<label><input type="radio" value="summer" name="weathe">Лето</label>
+	<label><input type="radio" value="otem" name="weathe">Осень</label>
+	<label><input type="radio" value="spring" name="weathe">Весна</label>
+	<br>
+	<input class="form__input--view form__batton--color" type="submit" name="send" value="Зарегистрироваться">
+	</div>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+main {
+  border:1px #ccc solid;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px #ccc;
+  padding:10px;
+  width: 380px;
+}
+
+div, p {
+  margin:20px;
+  
+  
+}
+
+h1, img {
+  display:inline-block;
+  margin:auto;
+}
+
+
+
+h1, p, a{
+  font-family:Arial, serif;
+  font-weight:normal;
+}
+
+button {
+  padding: 5px 13px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2em;
+  margin: 10px 0 10px 300px;
+}
+
+img {
+  height: 1em;
+  position:relative;
+  left:130px;
+  top:-20px;
+}
+
+p:hover::after { 
+    content: attr(data-title);
+    position: absolute; 
+    left: 30%; top: 23%;
+    font-family: Arial, sans-serif;
+    background: white;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
