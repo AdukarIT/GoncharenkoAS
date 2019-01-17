@@ -37,11 +37,11 @@
 1. [GIT](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task5)
 
 ## 6. CSS. Позиционирование
-1. [Practice](tast6)
+1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task6)
 
 ## 7. Float. Псевдоклассы и составные селекторы
-1. [Practice](task7)
-1. [Homework](task7)
+1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task7)
+1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task7)
 
 ## 8. Свойства видимости. Именование классов. БЭМ
-1. [Practice](task8)
+1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task8)
