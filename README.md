@@ -45,3 +45,6 @@
 
 ## 8. Свойства видимости. Именование классов. БЭМ
 1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task8)
+
+## 9. Изображения. Шрифты и иконки
+1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task9)
