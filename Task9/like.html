@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Like</title>
+	
+	<style>
+	@font-face {
+		font-family: "fontello";
+		src: url(font/fontello.ttf);
+	}
+
+	.icon-heart {
+		font-family: "fontello"
+	}
+
+	div {
+		text-align: center;
+		margin-top: 25%;
+		font-size: 2em;
+	}
+
+	.icon-heart:before {
+		content: '\e801';
+		color: grey;
+	}
+
+	.icon-heart:hover::before {
+		color: blue; 
+	}
+
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	input:checked + .icon-heart:before {
+		color: red;
+	}
+
+	input:checked + .icon-heart:hover:before {
+		opacity: .7;
+	}	
+
+	</style>
+</head>
+<body>
+<div >
+	<input type="checkbox" name="like" id="chek">
+    <label class="icon-heart" for="chek"></label>
+</div>
+</body>
+</html>

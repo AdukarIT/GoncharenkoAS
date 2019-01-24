@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Checkbox</title>
+	
+	<style>
+	@font-face {
+		font-family: "fontello";
+		src: url(font/fontello.ttf);
+	}
+
+	.icon-check,
+	.icon-check-empty {
+		font-family: "fontello"
+	}
+
+	div {
+		text-align: center;
+		margin-top: 25%;
+		font-size: 2em;
+	}
+
+	input[type="checkbox"] {
+		display: none;
+	}
+	
+	.icon-check-empty:before {
+		content: '\f096'; 
+		position: relative;
+		display: block;
+	}
+	.icon-check:before { 
+		content: '\e800';
+		position: relative;
+		display: none; 
+	}
+
+	input:checked + .icon-check-empty:before {
+		display: none;
+	}
+
+	input:checked ~ .icon-check:before {
+		display: block;
+	}
+
+	</style>
+</head>
+<body>
+<div>
+	<input type="checkbox" name="like" id="chek">
+	<label class="icon-check-empty" for="chek"></label>
+    <label class="icon-check" for="chek"></label>
+</div>
+</body>
+</html>
