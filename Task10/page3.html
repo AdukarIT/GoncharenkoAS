@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Page3</title>
+	<meta charset="utf-8">
+	<style>
+
+		.clearfix {
+			clear: both;
+			content: '';
+			display: table;
+		}
+		
+		* {
+			box-sizing: border-box;
+			margin: 0;
+		}
+
+		header {
+			border: 1px solid black;
+			width: 100%;
+		}
+
+		header > div {
+			display: inline-block;
+			float: left;
+			width: 25%;
+			text-align: center;
+			height: 50px;
+			padding: 15px 30px;
+			background: grey;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		footer {
+			height: 50px;
+			background-color: #f0f;
+		}
+
+		.inline-page {
+			display: inline-block;
+			padding: 20px;
+
+			
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.rg {
+			width: 30%;
+			display: inline-block;
+			margin: 10px;
+		}
+
+		img:hover::after { 
+ 			content: attr(data-title);
+		}
+
+</style>
+
+</head>
+<body>
+<header class="clearfix">
+		<div><a href="page1.html">Page1</a></div>
+		<div><a href="page2.html">Page2</a></div>
+		<div><a href="page3.html">Page3</a></div>
+		<div><a href="page4.html">Page4</a></div>
+	</header>
+<main class="clearfix">
+	<div class="inline-page">
+		<div class="rg"><img src="https://avatars.mds.yandex.net/get-pdb/51720/40139969-6314-4e21-87d1-160bf29643f2/s375"></div>
+		<div class="rg"><img data-title="awdawdawdaw" src="https://avatars.mds.yandex.net/get-pdb/51720/40139969-6314-4e21-87d1-160bf29643f2/s375"></div>
+		<div class="rg"><img  title="Cat" src="https://avatars.mds.yandex.net/get-pdb/51720/40139969-6314-4e21-87d1-160bf29643f2/s375"></div>
+	</div>
+	
+
+</main>
+
+	<footer>
+		<div></div>
+	</footer>
+</body>
+</html>

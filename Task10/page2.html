@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Page2</title>
+	<meta charset="utf-8">
+	<style>
+
+		.clearfix {
+			clear: both;
+			content: '';
+			display: table;
+		}
+		
+		* {
+			box-sizing: border-box;
+			margin: 0;
+		}
+
+		header {
+			border: 1px solid black;
+			width: 100%;
+		}
+
+		header > div {
+			display: inline-block;
+			float: left;
+			width: 25%;
+			text-align: center;
+			height: 50px;
+			padding: 15px 30px;
+			background: grey;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		footer {
+			height: 50px;
+			background-color: #f0f;
+		}
+		main {
+			width: 100%;
+		}
+		.left {
+			float: left;
+			width: 25%;
+			height: 50em;
+			background-color: red;
+		}
+
+		.middle {
+			width: 50%;
+			float: left;
+			background-color: orange;
+			height: 50em;
+		}
+
+		.right {
+			float: right;
+			width: 25%;
+			height: 50em;
+			background-color: red;
+		}
+
+		.menu li {
+			list-style: none;
+		}
+
+	</style> 
+</head>
+<body>
+	<header class="clearfix">
+		<div><a href="page1.html">Page1</a></div>
+		<div><a href="page2.html">Page2</a></div>
+		<div><a href="page3.html">Page3</a></div>
+		<div><a href="page4.html">Page4</a></div>
+	</header>
+	<main class="clearfix">
+		<div class="left "></div>
+		<div class="middle">d</div>
+		<div class="right menu">
+			<ul>
+				<li>Menu
+					<ul>
+						<li>Select 1</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<div></div>
+	</footer>
+</body>
+</html>
