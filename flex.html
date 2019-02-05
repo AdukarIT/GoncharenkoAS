@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>flexbox</title>
+	<meta charset="utf-8">
+<style>
+	
+	div {
+		padding: 3em;
+		background: #df0;
+		border: 1px solid #000;
+		border-radius: 3px;
+		flex-grow: 0;
+		flex-shrink: 1;
+	}
+
+	main {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-flow: row wrap;
+		justify-content: space-between; /* space-evenly*/
+		align-items: baseline;
+		height: 60vh;
+		align-content: space-around;
+
+	}
+
+	.exp {
+		font-size: 100%;
+		/*flex-basis: 70%;*/
+		order: -1;
+
+	}
+
+</style>
+</head>
+<body>
+	<main>
+		<div class="exp">раз</div>
+		<div>два</div>
+		<div class="exp">3 три три три</div>
+		<div>четыреыре четыре четыре четыре четыре четыре четыре чет етыре четыре</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style>
+
+.container {
+	border: 1px solid black;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.left, .right {
+	height: 10em;
+}
+	
+.left {
+	float: left;
+	width: 33.3333%;
+}
+
+.right {
+	float: right;
+	width: 75%;
+}
+
+.clearfix {
+	clear: both;
+	content:'';
+	display: table;
+}
+</style>
+<body>
+
+	<div class="container clearfix">
+		<div class="left">левый див</div>
+		<div class="left">средний див</div>
+		<div class="left">правый див</div>
+	</div>
+
+</body>
+</html>

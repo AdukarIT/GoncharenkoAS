@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Burger</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<style>
+		.burger {
+			display: none;
+		}
+		div {
+			padding: 5px 10px;
+		}
+
+		@media (max-width: 800px) {
+			.burger { 
+				display: block;
+				width: 10px;
+				border: 1px solid #000;
+			}
+			.submenu {
+				display: none;
+			}
+			.burger:hover ~ .submenu {
+				display: block;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="burger">=</div>
+	<div class="submenu">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+</div>	
+
+</body>
+</html>

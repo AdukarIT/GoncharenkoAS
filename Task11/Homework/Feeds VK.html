@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset=UTF-8">
+	<title>Feeds VK</title>
+	<style>
+		
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			background-color: #EDEEF0;
+			height: 100vh;
+		}
+		a {
+			text-decoration: none;	
+		}
+		li {
+			list-style: none;
+			display: flex;
+			justify-content: row;
+		}
+		@font-face {
+		font-family: "fontello";
+		src: url(../fontello/font/fontello.ttf);
+		}
+		.icon-plus, .icon-home,
+		.icon-music,.icon-camera,
+		.icon-videocam,.icon-glass,
+		.icon-user,.icon-users,
+		.icon-chat,.icon-search,
+		.icon-fire,.icon-filter,
+		.icon-bell-alt,.icon-gamepad,
+		.icon-play-circled,.icon-doc-inv,
+		.icon-newspaper,.icon-toggle-off,
+		.icon-toggle-on {
+			font-family: "fontello";
+			color: #183352;
+			height: 20px;
+			width: 20px;
+		}
+		       
+		.side-bar div[class*="icon-"] {
+			color: #7D9CB8;
+			width: 20px;
+			height: 20px;
+		}   
+		.icon-plus:before { 
+			content: '\e800';
+			float: right;
+		} 
+		.icon-home:before { 
+			content: '\e801';
+			float: left;
+		} 
+		
+		.icon-camera:before { 
+			content: '\e803'; 
+		} 
+		.icon-videocam:before { 
+			content: '\e804';
+		} 
+		.icon-glass:before { 
+			content: '\e805';
+			float: right; 
+		} 
+		.icon-user:before { 
+			content: '\e806'; 
+		} 
+		.icon-users:before { 
+			content: '\e807'; 
+		} 
+		.icon-chat:before { 
+			content: '\e808'; 
+		} 
+		.icon-search:before { 
+			content: '\e809'; 
+		} 
+		.icon-fire:before { 
+			content: '\e80a';
+			color: red; 
+		} 
+		.icon-filter:before { 
+			content: '\f0b0'; 
+		}
+		.icon-bell-alt:before {
+			content: '\f0f3';
+			position: relative;
+			left: 13px;
+			top: 11px;
+		} 
+		.nav-items .icon-music:before { 
+			content: '\e802';
+			position: relative;
+			left: 13px;
+			top: 11px;
+		} 
+		.icon-music:before { 
+			content: '\e802';
+		} 
+		.icon-play-circled:before { 
+			content: '\f144';
+			position: relative;
+			left: 13px;
+			top: 11px;
+		}
+		.icon-gamepad:before { 
+			content: '\f11b'; 
+		}
+		
+		.icon-doc-inv:before { 
+			content: '\f15b'; 
+		}
+		.icon-newspaper:before { 
+			content: '\f1ea';
+			width: 20px;
+			color: #7D9CB8;
+			height: 20px;
+
+		} 
+		.icon-toggle-off:before { 
+			content: '\f204'; 
+		} 
+		.icon-toggle-on:before { 
+			content: '\f205'; 
+			color: orange;
+		} 
+		.clearfix {
+			clear: both;
+			content: '';
+			display: table;
+		}
+		.header {
+			height: 42px;
+			background-color: #4C75A3;
+		}
+		.header__content {
+			width: 960px;
+			margin: 0 auto;
+			height: 42px;
+		}
+		.header__logo {
+			height: 42px;
+			width: 165px;
+			float: left;
+		}
+		.header__logo img {
+			height: 42px;
+		}
+		.header__search-form {
+			float: left;
+		}
+		.header__search-form span {
+			color: #85A0BE;
+		
+		}
+		.header__search-input {
+		    height: 28px;
+		    margin: 7px 0;
+		    padding: 6px 6px 6px 30px;
+		    vertical-align: middle;
+		    width: 230px;
+		    border: none;
+		    border-radius: 14px;
+		    outline: none;
+		    background-color: #224b7a;
+		    -webkit-appearance: none;
+		    color: #d9e2ec;
+		    transition: background-color 0.05s, color 0.05s;
+		}
+		.header__search-icon {
+		}
+		.nav-items {
+			display: flex;
+			float: left;
+			height: 42px;
+			width: 155px;
+			padding-left: 15px;
+
+		}
+		.nav-items a {
+			height: 42px;
+			width: 46px;
+		}
+		.header__content :not(.header__logo) a:hover {
+			background: #3d6898;
+		}
+		.profile:hover {
+			background: #3d6898;
+		}
+		.profile {
+			float: right;
+			display: flex;
+			align-items: center;
+			height: 42px;
+			width: 110px;
+			padding-left: 10px;
+			color: #fff;
+			font-weight: 400;
+		}
+		.profile img {
+			width: 28px;
+			height: 28px;
+			margin: 7px 0;
+			border-radius: 14px;
+		}
+		.main-container {
+			width: 960px;
+			height: 100vh;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+		}
+		.side-bar {
+			z-index: 10;
+		    width: 149px;
+		    padding-left: 10px;
+		    margin-top: 10px;
+		    display: flex;
+		    flex-flow: column nowrap;
+		    line-height: 32px;
+		}
+		.side-bar a {
+			height: 30px;
+			color: #285473;
+		    white-space: nowrap;
+		}
+		.side-bar span {
+			color: #285473;
+			height: 20px;
+			margin: 10px ;
+		}
+		.side-bar a:hover {
+			background: #E1E5EB;
+		}
+		hr {
+			margin-left: 20px;
+			width: 80%;
+		}
+		.right-side-bar {
+			margin-top: 10px;
+		}
+		.icon-glass, .icon-plus {
+			display: inline-block;
+			color: #316391;
+		}
+		.ight-side-bar__info {
+			padding-bottom: 10px;
+			border-radius: 3px;
+			box-shadow: 0 0 2px grey;
+			background: #fff;
+		}
+		.ight-side-bar__info--position a {
+			padding: 10px 10px 10px 20px;
+			height: 32px;
+			width: 230px;
+			display: flex;
+			justify-content: space-between;
+			line-height: 14px;
+			
+		}
+		.ight-side-bar__info--position  a {
+			color: #316391;
+		}
+		.ight-side-bar__info--position a:focus {
+			border-left: 2px solid #5181b8;
+			background: #f2f4f6;
+			padding-left: 18px;
+			font-weight: 800;
+			color: #070708;
+		}
+		.ight-side-bar__info--position a:hover {
+			border-left: 2px solid #5181b8;
+			background: #f2f4f6;
+			padding-left: 18px;
+		}
+		.grey {
+			color: grey;
+			padding-left: 20px;
+		}
+		.fire {
+			width: 230px;
+			height: 41px;
+			margin-top: 20px;
+			background: #fff;
+			border-radius: 3px;
+			box-shadow: 0 0 2px grey;
+			display: flex;
+			line-height: 41px;
+		}
+		.fire a {
+			width: 230px;
+			height: 41px;
+			display: flex;
+			flex-flow: row nowrap;
+			padding: 0 15px;
+			justify-content: space-between;
+			color: #000;
+		}
+		
+		input[type="checkbox"] {
+		display: none;
+		}
+		.icon-toggle-off:before {
+			content: '\f204'; 
+			position: relative;
+			display: block;
+		}
+		.icon-toggle-on:before { 
+			content: '\f205';
+			position: relative;
+			display: none; 
+		}
+
+		input:checked + .icon-toggle-off:before {
+			display: none;
+		}
+
+		input:checked ~ .icon-toggle-on:before {
+			display: block;
+		}
+		.post {
+			background: #f2f4f6;
+			width: 550px;
+			height: 760px;
+			margin-top: 10px;
+			padding: 20px;
+			background-image: url(img.png);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="header__content clearfix">
+			<a  class="header__logo" href="#"><div><img src="https://trashbox.ru/files/629311_528d4a/2.png"></div></a>
+			<div class="header__search-form">
+				<span class="icon-search"></span>
+				<input class="header__search-input" type="text" name="search" aria-label="Поиск">
+			</div>
+			<div class="nav-items">
+				<a href="#"><div class="icon-bell-alt"></div></a>
+				<a href="#"><div class="icon-music" href="#"></div></a>
+				<a href="#"><div class="icon-play-circled"></div></a>
+			</div>
+			<a class="profile" href="#"><div style="padding-right: 10px">Андрей</div><img src="https://pp.userapi.com/c834202/v834202954/e9de8/vU6c6S4qiv0.jpg?ava=1"></a>
+		</div>
+	</div>
+	<div class="main-container">
+		<div class="side-bar">
+					<a href="https://vk.com/c_o_4_n_bl_y"><div class="icon-home"><span>Моя страница</span></div></a>
+					<a href="#"><div class="icon-newspaper"><span>Новости</span></div></a>
+					<a href="#"><div class="icon-chat"><span>Сообщения</span></div></a>
+					<a href="#"><div class="icon-user"><span>Друзья</span></div></a>
+					<a href="#"><div class="icon-users"><span>Группы</span></div></a>
+					<a href="#"><div class="icon-camera"><span>Фотографии</span></div></a>
+					<a href="#"><div class="icon-music"><span>Музыка</span></div></a>
+					<a href="#"><div class="icon-videocam"><span>Видео</span></div></a>
+					<a href="#"><div class="icon-gamepad"><span>Игры</span></div></a>
+					<hr>
+					<a href="#"><div class="icon-doc-inv"><span>Документы</span></div></a>
+				
+			</nav>
+		</div>
+		<div class="post">
+		
+	</div>
+		<div class="right-side-bar">
+			<div class="ight-side-bar__info">
+				<div class="ight-side-bar__info--position">
+					<a href="#"><span>Новости</span><div><span class="icon-glass"></span><span class="icon-plus"></span></div></a>
+					<a href="#"><span class="grey">Фотографии</span></a>
+					<a href="#"><span class="grey">Видеозаписи</span></a>
+					<a href="#"><span class="grey">Понравилось</span></a>
+					<a href="#"><span class="grey">Подкасты</span></a>
+					<a href="#"><span>Рекомендации</span></a>
+					<a href="#"><span>Поиск</span></a>
+					<hr>
+					<a href="#"><span>Обновления</span></a>
+					<a href="#"><span>Коментарии</span></a>
+				</div>
+				
+			</div>
+			<div class="fire">
+					<a href="#" for="slide"><div class="icon-fire"></div><span for="slide">Сначала интерестные</span>
+						<div>
+							<input type="checkbox" name="slide" id="slide">
+							<label class="icon-toggle-off" for="slide"></label>
+						    <label class="icon-toggle-on" for="slide"></label>
+						</div></a>
+				</div>
+	</div>
+	
+</div>
+
+
+
+
+</body></html>
