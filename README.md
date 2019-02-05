@@ -48,3 +48,9 @@
 
 ## 9. Изображения. Шрифты и иконки
 1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task9)
+
+## 10. Практика
+1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task10)
+
+## 11. Flexbox
+1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task11)
