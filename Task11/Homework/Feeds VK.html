@@ -26,19 +26,17 @@
 		src: url(../fontello/font/fontello.ttf);
 		}
 		.icon-plus, .icon-home,
-		.icon-music,.icon-camera,
-		.icon-videocam,.icon-glass,
-		.icon-user,.icon-users,
-		.icon-chat,.icon-search,
-		.icon-fire,.icon-filter,
-		.icon-bell-alt,.icon-gamepad,
-		.icon-play-circled,.icon-doc-inv,
-		.icon-newspaper,.icon-toggle-off,
+		.icon-music, .icon-camera,
+		.icon-videocam, .icon-glass,
+		.icon-user, .icon-users,
+		.icon-chat, .icon-search,
+		.icon-fire, .icon-filter,
+		.icon-bell-alt, .icon-gamepad,
+		.icon-play-circled, .icon-doc-inv,
+		.icon-newspaper, .icon-toggle-off,
 		.icon-toggle-on {
 			font-family: "fontello";
 			color: #183352;
-			height: 20px;
-			width: 20px;
 		}
 		       
 		.side-bar div[class*="icon-"] {
@@ -49,10 +47,16 @@
 		.icon-plus:before { 
 			content: '\e800';
 			float: right;
+			margin-left: 10px;
+			opacity: .5;
+		} 
+		.icon-plus:hover:before { 
+			opacity: 1;
 		} 
 		.icon-home:before { 
 			content: '\e801';
-			float: left;
+			margin-right: 4px;
+			padding-left: auto;
 		} 
 		
 		.icon-camera:before { 
@@ -63,23 +67,30 @@
 		} 
 		.icon-glass:before { 
 			content: '\e805';
-			float: right; 
-		} 
+			float: right;
+			opacity: .5; 
+		}
+		.icon-glass:hover:before { 
+			opacity: 1;
+		}
 		.icon-user:before { 
 			content: '\e806'; 
+			margin-right: 7px;
 		} 
 		.icon-users:before { 
-			content: '\e807'; 
+			content: '\e807';
+			margin-right: 2px; 
 		} 
 		.icon-chat:before { 
-			content: '\e808'; 
+			content: '\e808';
+			margin-right: 3px; 
 		} 
 		.icon-search:before { 
 			content: '\e809'; 
 		} 
 		.icon-fire:before { 
 			content: '\e80a';
-			color: red; 
+			color: red;
 		} 
 		.icon-filter:before { 
 			content: '\f0b0'; 
@@ -98,6 +109,7 @@
 		} 
 		.icon-music:before { 
 			content: '\e802';
+			margin-right: 3px;
 		} 
 		.icon-play-circled:before { 
 			content: '\f144';
@@ -114,10 +126,8 @@
 		}
 		.icon-newspaper:before { 
 			content: '\f1ea';
-			width: 20px;
 			color: #7D9CB8;
-			height: 20px;
-
+			margin-right: 10px;
 		} 
 		.icon-toggle-off:before { 
 			content: '\f204'; 
@@ -132,8 +142,11 @@
 			display: table;
 		}
 		.header {
+			width: 100%;
 			height: 42px;
 			background-color: #4C75A3;
+			position: fixed;
+			z-index: 100;
 		}
 		.header__content {
 			width: 960px;
@@ -150,26 +163,42 @@
 		}
 		.header__search-form {
 			float: left;
+			position: relative;
+			height: 28px;
+		    margin: 7px 0; 
+		    width: 230px;
+		    border: none;
+		    border-radius: 14px;
+
 		}
-		.header__search-form span {
+		.header__search-form {
 			color: #85A0BE;
-		
+			line-height: 28px;
+			position: relative;
+			
 		}
 		.header__search-input {
-		    height: 28px;
-		    margin: 7px 0;
-		    padding: 6px 6px 6px 30px;
-		    vertical-align: middle;
+			float: left;
+			position: absolute;
+			background-image: url(https://api.icons8.com/download/debf64e982dcb6b26217561e289bd44c02fc9e74/iOS7/PNG/512/Very_Basic/search_filled-512.png) ;
+			background-size: 17px 17px;
+			background-repeat: no-repeat;
+			background-position: 8px 6px;
+			height: 28px;
 		    width: 230px;
 		    border: none;
 		    border-radius: 14px;
 		    outline: none;
 		    background-color: #224b7a;
-		    -webkit-appearance: none;
-		    color: #d9e2ec;
-		    transition: background-color 0.05s, color 0.05s;
+		    padding-left: 30px;
 		}
-		.header__search-icon {
+		.header__search-input:focus {
+			background: #fff;
+			background-image: url(https://api.icons8.com/download/debf64e982dcb6b26217561e289bd44c02fc9e74/iOS7/PNG/512/Very_Basic/search_filled-512.png) ;
+			background-size: 17px 17px;
+			background-repeat: no-repeat;
+			background-position: 8px 6px;
+			
 		}
 		.nav-items {
 			display: flex;
@@ -177,7 +206,6 @@
 			height: 42px;
 			width: 155px;
 			padding-left: 15px;
-
 		}
 		.nav-items a {
 			height: 42px;
@@ -195,9 +223,9 @@
 			align-items: center;
 			height: 42px;
 			width: 110px;
-			padding-left: 10px;
 			color: #fff;
 			font-weight: 400;
+			padding-left: 5px; 
 		}
 		.profile img {
 			width: 28px;
@@ -205,24 +233,31 @@
 			margin: 7px 0;
 			border-radius: 14px;
 		}
+		.top_profile_arrow {
+			height: 42px
+			width: 10px;
+			padding-left: 6px;
+			padding-top: 8px;
+		}
 		.main-container {
+			padding-top: 57px;
 			width: 960px;
-			height: 100vh;
 			margin: 0 auto;
+			position: relative;
 			display: flex;
-			justify-content: space-between;
 		}
 		.side-bar {
 			z-index: 10;
 		    width: 149px;
 		    padding-left: 10px;
-		    margin-top: 10px;
 		    display: flex;
 		    flex-flow: column nowrap;
+		  
 		    line-height: 32px;
 		}
 		.side-bar a {
 			height: 30px;
+			line-height: 30px;
 			color: #285473;
 		    white-space: nowrap;
 		}
@@ -230,6 +265,10 @@
 			color: #285473;
 			height: 20px;
 			margin: 10px ;
+		}
+		.side-bar div {
+			width: 20px;
+			height: 20px;
 		}
 		.side-bar a:hover {
 			background: #E1E5EB;
@@ -239,19 +278,20 @@
 			width: 80%;
 		}
 		.right-side-bar {
-			margin-top: 10px;
+			position: relative;
 		}
 		.icon-glass, .icon-plus {
 			display: inline-block;
 			color: #316391;
 		}
-		.ight-side-bar__info {
+		.right-side-bar__info {
 			padding-bottom: 10px;
 			border-radius: 3px;
 			box-shadow: 0 0 2px grey;
 			background: #fff;
+			position: fixed;
 		}
-		.ight-side-bar__info--position a {
+		.right-side-bar__info--position a {
 			padding: 10px 10px 10px 20px;
 			height: 32px;
 			width: 230px;
@@ -260,17 +300,17 @@
 			line-height: 14px;
 			
 		}
-		.ight-side-bar__info--position  a {
+		.right-side-bar__info--position  a {
 			color: #316391;
 		}
-		.ight-side-bar__info--position a:focus {
+		.right-side-bar__info--position a:focus {
 			border-left: 2px solid #5181b8;
 			background: #f2f4f6;
 			padding-left: 18px;
 			font-weight: 800;
 			color: #070708;
 		}
-		.ight-side-bar__info--position a:hover {
+		.right-side-bar__info--position a:hover {
 			border-left: 2px solid #5181b8;
 			background: #f2f4f6;
 			padding-left: 18px;
@@ -288,6 +328,8 @@
 			box-shadow: 0 0 2px grey;
 			display: flex;
 			line-height: 41px;
+			position: fixed;
+			top: 370px;
 		}
 		.fire a {
 			width: 230px;
@@ -321,36 +363,128 @@
 			display: block;
 		}
 		.post {
-			background: #f2f4f6;
+			border-radius: 3px;
+			box-shadow: 0 0 2px grey;
+			background: #F6F5F6;
 			width: 550px;
-			height: 760px;
 			margin-top: 10px;
-			padding: 20px;
-			background-image: url(img.png);
+			position: relative;
+			margin: 0 15px;
 		}
-
+		.post__img-groops {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+		.post__header {
+			display: flex;
+			margin: 16px;
+		}
+		.post_header_info {
+			margin-left: 10px;
+			position: absolute;
+			left: 65px;
+			top: 0;
+		}
+		.post_author a {
+			color: #2a5885;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+		.post_author a:hover {
+			text-decoration: underline;
+		}
+		.post_date {
+			position: absolute;
+			top: 45px;
+			color: #939393;
+		}
+		.arrow  {
+		    background-image: url(https://banner2.kisspng.com/20180719/jqc/kisspng-arrow-down-android-computer-icons-arrow-keyboard-5b50487cf01901.5441637015319880929835.jpg);
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    position: absolute;
+		    transform: rotate(180deg);
+		    opacity: .5;
+		    top: 20px;
+		    right: 18px;
+		    width: 22px;
+		    height: 24px;
+		}
+		.post__content {
+			margin: 15px; 
+			display: flex;
+			flex-flow: column;
+		}
+		.post__content img {
+		    width: 407px;
+   			height: 510px;
+   			margin-top: 10px;
+		}
+		.like_cont {
+			position: relative;
+			height: 51px;
+			margin: 0 20px;
+			border-top: 1px solid #e7e8ec;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+		.like_cont__left {
+			display: flex;
+			position: relative;
+			width: 200px;
+			justify-content: space-between;
+		}
+		.like {
+			height: 51px;
+			position: relative;
+		}
+		.like_cont a {
+			width: 54px;
+		}
+		.like img {
+			height: 24px;
+			margin-top: 13px;
+		}
+		.like span {
+			height: 24px;
+			position: absolute;
+			top: 18px;
+			right: 5px;
+			text-align: left;
+		}
+		.count {
+			font-size: 16px;
+		    line-height: 16px;
+		    overflow: hidden;
+		    color: #67707a;
+		}
+		.like_cont__right {
+			width: 75px;
+			opacity: .6;
+		}
 	</style>
 </head>
 <body>
 	<div class="header">
-		<div class="header__content clearfix">
+		<div class="header__content">
 			<a  class="header__logo" href="#"><div><img src="https://trashbox.ru/files/629311_528d4a/2.png"></div></a>
 			<div class="header__search-form">
-				<span class="icon-search"></span>
-				<input class="header__search-input" type="text" name="search" aria-label="Поиск">
+				<input class="header__search-input" type="text" name="search" placeholder="Поиск">
 			</div>
 			<div class="nav-items">
 				<a href="#"><div class="icon-bell-alt"></div></a>
 				<a href="#"><div class="icon-music" href="#"></div></a>
 				<a href="#"><div class="icon-play-circled"></div></a>
 			</div>
-			<a class="profile" href="#"><div style="padding-right: 10px">Андрей</div><img src="https://pp.userapi.com/c834202/v834202954/e9de8/vU6c6S4qiv0.jpg?ava=1"></a>
+			<a class="profile" href="#"><div style="padding-right: 10px">Андрей</div><img src="https://pp.userapi.com/c834202/v834202954/e9de8/vU6c6S4qiv0.jpg?ava=1"><div class="top_profile_arrow">&#709;</div></a>
 		</div>
 	</div>
 	<div class="main-container">
 		<div class="side-bar">
 					<a href="https://vk.com/c_o_4_n_bl_y"><div class="icon-home"><span>Моя страница</span></div></a>
-					<a href="#"><div class="icon-newspaper"><span>Новости</span></div></a>
+					<a class="icon-newspaper" href="#">Новости</a>
 					<a href="#"><div class="icon-chat"><span>Сообщения</span></div></a>
 					<a href="#"><div class="icon-user"><span>Друзья</span></div></a>
 					<a href="#"><div class="icon-users"><span>Группы</span></div></a>
@@ -364,11 +498,28 @@
 			</nav>
 		</div>
 		<div class="post">
-		
-	</div>
+		<div class="post__header"><a href="https://vk.com/all_bikers_unite"><img class="post__img-groops" src="https://sun2.beltelecom-by-minsk.userapi.com/c845523/v845523408/12f276/wrYWQNRfHNk.jpg?ava=1"></a>
+			<div class="post_header_info">
+				<h5 class="post_author"><a href="https://vk.com/all_bikers_unite">★ МОТО - КВАДРО ★</a></h5>
+				<span class="post_date">24 минуты назад</span>
+			</div>
+			<div class="arrow"></div>
+		</div>
+			<div class="post__content">S1000RR<img src="https://sun2.beltelecom-by-minsk.userapi.com/c635101/v635101592/35359/66iM85uURoo.jpg">dadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiadadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijjnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw id niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwdadawd awdkmawdnjawnd jnaijwdnkja nijanw ijdnawijd niajwndiaj mnwj mnw</div>
+			<div class="like_cont">
+				<div class="like_cont__left">
+					<a href="#"><div class="like"><img src="http://s1.iconbird.com/ico/2013/8/429/w512h5121377939770185083likelovestreamline.png"><span class="count">51</span></div></a>
+					<a href="#"><div class="like"><img src="https://api.icons8.com/download/822301f0f2e4947b288864ff0c74a2e4de7fc296/iOS7/PNG/512/Messaging/speech_bubble-512.png"><span class="count">1</span></div></a>
+					<a href="#"><div class="like"><img src="https://png.pngtree.com/element_origin_min_pic/00/00/07/155788a1505ea99.jpg"><span class="count">1</span></div></a>
+				</div>
+				<div class="like_cont__right">
+					<a href="#"><div class="like"><img src="https://banner2.kisspng.com/20180420/jaw/kisspng-eye-computer-icons-eye-pupil-5ad968a012bfe4.2922474615241975360768.jpg"><span class="count">1.3K</span></div></a>
+				</div>
+			</div>
+		</div>
 		<div class="right-side-bar">
-			<div class="ight-side-bar__info">
-				<div class="ight-side-bar__info--position">
+			<div class="right-side-bar__info">
+				<div class="right-side-bar__info--position">
 					<a href="#"><span>Новости</span><div><span class="icon-glass"></span><span class="icon-plus"></span></div></a>
 					<a href="#"><span class="grey">Фотографии</span></a>
 					<a href="#"><span class="grey">Видеозаписи</span></a>
@@ -383,7 +534,7 @@
 				
 			</div>
 			<div class="fire">
-					<a href="#" for="slide"><div class="icon-fire"></div><span for="slide">Сначала интерестные</span>
+					<a href="#" for="slide"><div for="slide" class="icon-fire"></div><span for="slide">Сначала интерестные</span>
 						<div>
 							<input type="checkbox" name="slide" id="slide">
 							<label class="icon-toggle-off" for="slide"></label>
@@ -397,4 +548,5 @@
 
 
 
-</body></html>
+</body>
+</html>
