@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Subzero</title>
+	<meta charset="utf-8">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.zero {
+			height: 135px;
+			width: 66px;
+			background-image: url(sub.jpg);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			margin: 20% auto;
+		}
+		@keyframes wait {
+			0% { background-position: 0 0; }
+			100% { background-position: -396px 0; }
+		}
+		.zero:hover {
+			animation: wait .3s infinite steps(6) alternate 1ms;
+		}
+	</style>
+</head>
+<body>
+	<div class="zero"></div>
+</body>
+</html>
