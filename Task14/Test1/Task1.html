@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Task1</title>
+	<meta charset="utf-8">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			width: 960px;
+			margin: 0 auto;
+			min-height: 100vh;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+		}
+		.clearfix {
+			clear: both;
+			content: '';
+			display: table;
+		}
+		.text {
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			line-height: 22px;
+		}
+		header {
+			width: 960px;
+			padding: 24px 0 0 0;
+			position: relative;
+			flex: 0 0 auto;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #696969;
+		}
+		.header-first {
+			height: 108px;
+			width: 122px;
+			float: left;
+			margin-right: 23px;
+		}
+		.header-second {
+			height: 108px;
+			width: 279px;
+			float: left;
+			position: absolute;
+			margin-left: 145px;
+		}
+		.header-third {
+			height: 108px;
+			width: 513px;
+			float: right;
+			text-align: right;
+			padding: 25px 22px;
+		}
+		header div, .lside div,
+		footer div, header img,
+		.lside__float, footer img{
+			background: #777;
+		}
+		.main, .many,
+		.bottom-div div {
+			background: #DCDCDC;
+		}
+		.content {
+			display: flex;
+			justify-content: space-between;
+			flex: 1 0 auto;
+			padding: 20px 0;
+		}
+		.lside {
+			width: 184px;
+			height: 820px;
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+		}
+		.lside div {
+			padding: 20px 10px;
+		}
+		.lside__float {
+			height: 134px;
+			position: absolute;
+			bottom: 0;
+		}
+		.lside__float {
+			width: 184px;
+		}
+		footer {
+			margin-bottom: 0;
+			display: flex;
+			justify-content: space-between;
+			flex: 0 0 auto;
+			padding-top: 20px;
+			border-top: 1px solid #696969;
+		}
+		.footer-div:nth-child(1),
+		.footer-div:nth-child(2) {
+			height: 180px;
+			width: 297px;
+		}
+		.last-div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 308px;
+			height: 180px;
+			background: none;
+		}
+		.last-div div, .last-div img {
+			height: 75px;
+			width: 308px;
+		}
+		.main {
+			width: 757px;
+			height: 210px;
+		}
+		.rside {
+			width: 757px;
+			display: flex;
+			flex-flow: row wrap;
+			align-content: space-between;
+		}
+		.many {
+			display: block;
+			height: 155px;
+			width: 135px; 
+			float: left;
+			margin: 10px 20.5px 10px 0;
+		}
+		.many:nth-child(5n){
+			margin-right: 0;
+		}
+		.bottom-div {
+			height: 200px;
+			width: 757px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.bottom-div div  {
+			width: 368px;
+			height: 200px;
+		}
+		ul {
+			list-style: none;
+			padding-left: 0;
+			color: #fff;
+			margin: 0;
+		}
+		span {
+			font-weight: bold;
+		}
+		a {
+			display: block;
+			color: #fff;
+		}
+		.footer-first ul {
+			column-count: 2;
+		}
+		.footer-first, .footer-second {
+			padding: 18px 25px;
+		}
+		.footer-second ul {
+			list-style: square;
+			padding-left: 20px;
+		}
+		.bottom-div div {
+			padding: 20px 15px;
+		}
+	</style>
+</head>
+<body>
+	<header class="clearfix">
+		<img src="#" alt="first-img" title="first-img" class="header-first"><div class="header-second"></div><div class="header-third"> <a href="tel="+74993757587"">+7 (499) 375-75-87</a>
+		<a href="#">manager@pixelplus.ru</a><a href="#">www.pixelplus.ru</a></div>
+	</header>
+	<div class="content">
+		<div class="lside">
+			<div>
+				<ul>
+					<li><span>Создание сайтов</span>
+						<ul>
+							<li>Изготовление сайтов &laquo;под ключ&raquo;</li>
+							<li>Как мы работаем</li>
+							<li>Интеграция с 1С</li>
+							<li>Поддержка сайтов</li>
+							<li>Создание сайтов</li>
+							<li>Битрикс</li>
+							<li>Модули битрикс</li>
+							<li>Купить битрикс</li>
+							<li>Дизайн сайтов</li>
+							<li>Редизайн сайтов</li>
+							<li>Интернет-магазины</li>
+							<li>Создание логотипов</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<img src="#" alt="img" title="img" class="lside__float">
+		</div>
+		<div class="rside">
+			<div class="main"></div>
+			<div class="many-container">
+				<img src="#" alt="img" title="img" class="many">
+				<img src="#" alt="img" title="img" class="many">
+				<img src="#" alt="img" title="img" class="many">
+				<img src="#" alt="img" title="img" class="many">
+				<img src="#" alt="img" title="img" class="many">
+				<img src="#" alt="img" title="img" class="many">
+				<img src="#" alt="img" title="img" class="many">
+			</div>
+			<div class="bottom-div">
+			<div>Студия «Пиксель Плюс» разработает полнофункциональный продукт ориентированный на целевую аудиторию и эффективно решающий поставленные перед ним маркетинговые задачи. Опыт работ и использование собственных технологий, позволяет предлагать услугу изготовления сайта в Москве в разумные сроки.</div>
+			<div>Поисковое продвижение (раскрутка) ведется по коммерческим запросам, что позволяет многократно увеличить количество продаж с сайта при разумном рекламном бюджете.
+</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-div footer-first">
+			<ul>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт7</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+			</ul>
+		</div>
+		<div class="footer-div footer-second">
+			<ul>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт1</li>
+				<li>Пункт7</li>
+			</ul>
+		</div>
+		<div class="last-div">
+			<div></div>
+			<img src="#" alt="img" title="img">
+		</div>
+	</footer>
+</body>
+</html>
