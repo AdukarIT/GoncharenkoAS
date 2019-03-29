@@ -79,22 +79,57 @@
 
 // console.log(repeat('ба', 3));
 
-let studs = +prompt("Studs");
-let desks = +prompt("Desks");
+// let studs = +prompt("Studs");
+// let desks = +prompt("Desks");
 
-function checkDesk(studs, desks) {
-	let result = studs % desks;
-	if (result == 0) {
-		console.log('Well done');
-	} else if (result == 1){
-		console.log('не хватает 1 парты');
-	} else {
-		console.log('Не хватает парт');
-	}
-}
-checkDesk(studs, desks);
+// function checkDesk(studs, desks) {
+// 	let result = studs % desks;
+// 	if (result == 0) {
+// 		console.log('Well done');
+// 	} else if (result == 1){
+// 		console.log('не хватает 1 парты');
+// 	} else {
+// 		console.log('Не хватает парт');
+// 	}
+// }
+// checkDesk(studs, desks);
 
+// let x = +prompt("Число 1-10");
 
+// function grade(x) {
+// 	switch(x) {
+// 		case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 			case 1:
+// 			return 'Offul';
+// 			break;
+// 		 default:
+// 		 	return 'nain';
+// 		}
+// 	}
+// 	console.log(grade(x));
 
 
 
