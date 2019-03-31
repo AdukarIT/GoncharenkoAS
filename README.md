@@ -59,7 +59,7 @@
 1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task12)
 
 ## 13. CSS. Эффекты. Анимация
-1. [Practice]()
+1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task13/Practice)
 1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/Task13/Homework)
 
 ## 14. Итоговая рабта по верстке

@@ -50,7 +50,7 @@
 // }
 
 
-// let first = +prompt('Введите первое число');  Number(prompt('Введите первое число'));
+// let first = +prompt('Введите первое число');     // Number(prompt('Введите первое число'));
 // let second = +prompt('Введите второе число');
 
 // if (first > second) {
@@ -59,14 +59,14 @@
 // 	console.log(second);
 // }
 
-// let first = +prompt('Введите первое число');
-// let second = +prompt('Введите второе число');
+let first = +prompt('Введите первое число');
+let second = +prompt('Введите второе число');
 
-// if (first * second >= 0) {
-// 	console.log("+");
-// } else {
-// 	console.log("-");
-// }
+if (first * second >= 0) {
+	console.log("+");
+} else {
+	console.log("-");
+}
 
 
 // console.log(0);
@@ -124,14 +124,14 @@
 // 	}
 // }
 
-let x = +prompt('x');
+// let x = +prompt('x');
 
-while (x > 0) {
-	x--; 
-	if (!(x % 2)) {
-		console.log(x);
-	}
-}
+// while (x > 0) {
+// 	x--; 
+// 	if (!(x % 2)) {
+// 		console.log(x);
+// 	}
+// }
 
 
 

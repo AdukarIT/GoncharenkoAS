@@ -151,12 +151,34 @@
 // 	break;
 // }
 	
+//Решение по проще)
+
+// let x = 0;
+// let y = 1;
+// let f;
+
+// console.log(x);
+// console.log(y);
+
+// for (i = 2; i < 15; i++) {
+// 	f = x + y;
+// 	console.log(f);
+// 	x = y;
+// 	y = f;
+// }
+
+//Шахматная доска
 
 
-
-
-
-
+// let x = " # # # #";
+// let y = "# # # #";
+// 	for (let i = 1; i <= 8; i++) {
+// 		if (i % 2 == 0) { 
+//     		console.log(x);
+//   		} else if (i % 2 != 0) {
+//     		console.log(y);
+//   		}
+// }
 
 
 
