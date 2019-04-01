@@ -66,7 +66,12 @@
 1. [StPaulsSchool](https://github.com/J-u-i-c-y/Project-CSS)
 
 ## 15. Операторы. Циклы
+1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/JS/Task1)
+1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/JS/Task1)
 
+## 16. Функции
+1. [Practice]()
+1. [Homework]()
 
 
 
