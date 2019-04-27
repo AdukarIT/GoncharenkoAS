@@ -2,16 +2,16 @@
 // Используя встроенную функцию Math.random(), напишите собственную функцию getRandomArray(len), которая возвращает массив случайных чисел длиной len.
 
 
-// let getRandomArray = new Array(10); 
+let getRandomArray = new Array(10); 
 
-// function getRandomIntInclusive(min, max, Array) {
-// 	for (i = 0; i < Array.length; i++) {
-// 		Array[i] = Math.floor((Math.random() * (max - min + 1)) + min);     // РАНДОМ ДЛЯ ЦЕЛЫХ ЧИСЕЛ
-// 	}
-// 	console.log(Array); 
-// }
+function getRandomIntInclusive(min, max, Array) {
+	for (i = 0; i < Array.length; i++) {
+		Array[i] = Math.floor((Math.random() * (max - min + 1)) + min);     // РАНДОМ ДЛЯ ЦЕЛЫХ ЧИСЕЛ
+	}
+	console.log(Array); 
+}
 
-// getRandomIntInclusive(1, 10, getRandomArray);
+getRandomIntInclusive(1, 10, getRandomArray);
 
 
 // function getRandomIntInclusive(min, max, Array) {
@@ -72,27 +72,39 @@
 //Верните массив с результатами сложения.
 
 
-let firstArray = [3,5,4,2];
-let secondArray = [6,1,2,4];
-let thirdArray = [];
+// let firstArray = [3,5,4,2];
+// let secondArray = [6,1,2,4];
+// let thirdArray = [];
 
-function sumArray() {
-	for (let i = 0; i < firstArray.length; i++) {       // Работает не совсем правильно
-		secondArray.reverse();
-		thirdArray.push(firstArray[i] + secondArray[i]);
-	}
-}
-sumArray();
-console.log(thirdArray);
-secondArray.reverse();
-console.log(secondArray[1]);
+// function sumArray() {
 
+// 	secondArray.reverse();
 
-
+// 	for (let i = 0; i < firstArray.length; i++) {      
+// 		thirdArray.push(firstArray[i] + secondArray[i]);
+// 	}
+// }
+// sumArray();
+// console.log(thirdArray);
+// secondArray.reverse();
 
 
+// Отсортируйте массив методом пузырька.
 
 
+function sortBublle() {
+	for (let i = 0; i < getRandomArray.length - 1; i++) {
+    	for (j = 0; j < getRandomArray.length - 1 - i; j++) { 
+	      	if (getRandomArray[j + 1] < getRandomArray[j]) {
+	      	 	let sort = getRandomArray[j + 1]; 
+	      	 	getRandomArray[j + 1] = getRandomArray[j];
+	      	 	getRandomArray[j] = sort; 
+	      	}
+    	}
+    }                    
+    return getRandomArray;
+    }
+console.log(sortBublle());
 
 
 
