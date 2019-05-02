@@ -73,9 +73,9 @@
 //   },
 //   fly: function() { 
 //     if (this.canFly == true) {
-//       return console.log("Я умею летать");
+//       return console.log("и я умею летать");
 //     } else {
-//       return console.log("Я не умею летать");
+//       return console.log("и я не умею летать");
 //     }
 //   }
 // };

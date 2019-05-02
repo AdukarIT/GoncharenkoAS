@@ -77,6 +77,7 @@
 1. [Practice](https://github.com/AdukarIT/GoncharenkoAS/tree/master/JS/Task3)
 1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/JS/Task3)
 
-
+## Обьекты 
+1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/JS/Task4)
 
 
