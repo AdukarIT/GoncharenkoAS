@@ -80,4 +80,7 @@
 ## Обьекты 
 1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/tree/master/JS/Task4)
 
+## Встроенные возможности JavaScript
+1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/blob/master/JS/Task5/homework.js)
+
 
