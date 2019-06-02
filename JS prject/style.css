@@ -1,0 +1,30 @@
+* {
+	background-color: #EEEEEE;
+	box-sizing: border-box;
+}
+
+
+.wraper-position {
+	margin: 0 auto;
+	width: 90%;
+	padding: 20px;
+}
+
+.wraper-style {
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px;
+}
+
+.table-phone {
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+tr,th,td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 2px 5px;
+	height: 20px;
+	width: 100px;
+}
