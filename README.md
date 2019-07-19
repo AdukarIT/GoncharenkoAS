@@ -84,4 +84,4 @@
 1. [Homework](https://github.com/AdukarIT/GoncharenkoAS/blob/master/JS/Task5/homework.js)
 
 ## dawdawd
-1. [SW](https://J-u-i-c-y.github.io/SW/swapi.html)
+1. [SW](https://J-u-i-c-y.github.io/SW/index.html)
